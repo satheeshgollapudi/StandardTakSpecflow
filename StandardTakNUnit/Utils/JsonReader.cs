@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 namespace test.Utils
@@ -19,9 +20,10 @@ namespace test.Utils
         public String certificate { get; set; }
         public String from { get; set; }
         public String year { get; set; }
+        public List<LanguageData> Languages { get; set; }
 
 
-       
+
 
 
 
@@ -34,8 +36,12 @@ namespace test.Utils
             return jr;
         }
 
-      
 
+        public class LanguageData
+        {
+            public string Language { get; set; }
+            public string Level { get; set; }
+        }
 
     }
 }

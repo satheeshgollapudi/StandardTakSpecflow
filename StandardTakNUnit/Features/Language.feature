@@ -15,9 +15,17 @@ Scenario: Check if user could able to add a language
 	When I add a new language
 	Then that language should be displayed on my listings
 
-	Scenario Outline: TC2 Check if user could able to add  maximum of 4 languages 
+	
+	Scenario: TC2 Check if user could able to add  maximum of 4 languages 
 	Given I clicked on the Language tab under Profile page
-	When  I add four new Languages <Language> and <Level> with <expected> languages added
+	When  I add four new Languages 
+	Then  should be able to add four languages only
+
+	
+
+	Scenario Outline: TC3 Check if user could able to add  maximum of 4 languages 
+	Given I clicked on the Language tab under Profile page
+	When  I add four new Languages <Language> and <Level> 
 	Then  should be able to add four languages only
 	Examples:
 	| Language | Level | Expected |
