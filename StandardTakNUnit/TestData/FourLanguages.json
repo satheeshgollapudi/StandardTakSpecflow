@@ -1,18 +1,20 @@
-[
-  {
-    "Language": "English",
-    "Level": "Basic"
-  },
-  {
-    "Language": "Spanish",
-    "Level": "Basic"
-  },
-  {
-    "Language": "French",
-    "Level": "Basic"
-  },
-  {
-    "Language": "German",
-    "Level": "Basic"
-  }
-]
+{
+  "Languages": [
+    {
+      "Language": "English",
+      "Level": "Basic"
+    },
+    {
+      "Language": "Spanish",
+      "Level": "Basic"
+    },
+    {
+      "Language": "French",
+      "Level": "Basic"
+    },
+    {
+      "Language": "German",
+      "Level": "Basic"
+    }
+  ]
+}
