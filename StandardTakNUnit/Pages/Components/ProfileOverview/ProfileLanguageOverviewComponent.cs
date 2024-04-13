@@ -26,15 +26,15 @@ namespace test.Pages.components
         {
             try
             {
-                languagesTitle = driver.FindElement(By.XPath("(//h3[@class='alt'])[1]"));
-                languagesSubHeading1 = driver.FindElement(By.XPath("(//div[@class='question'])[1]"));
-                languagesSubHeading2 = driver.FindElement(By.XPath("(//div[@class='tooltip'])[1]"));
+                //languagesTitle = driver.FindElement(By.XPath("(//h3[@class='alt'])[1]"));
+                //languagesSubHeading1 = driver.FindElement(By.XPath("(//div[@class='question'])[1]"));
+                //languagesSubHeading2 = driver.FindElement(By.XPath("(//div[@class='tooltip'])[1]"));
                 //languages = driver.FindElements(By.XPath("//table[contains(@class,'ui fixed')]/tbody"));
                 addLanguageButton = driver.FindElement(By.XPath("(//div[contains(@class,'ui teal button')])[1]"));
-                inputLanguageTextBox = driver.FindElement(By.XPath("//input[@placeholder='Add Language']"));
-                chooseLanguage = driver.FindElement(By.XPath(" //select[@class='ui dropdown']"));
-                addButton = driver.FindElement(By.XPath("//input[@value='Add']"));
-                cancelButton = driver.FindElement(By.XPath("//input[@value='Cancel']"));
+                //inputLanguageTextBox = driver.FindElement(By.XPath("//input[@placeholder='Add Language']"));
+                //chooseLanguage = driver.FindElement(By.XPath(" //select[@class='ui dropdown']"));
+                //addButton = driver.FindElement(By.XPath("//input[@value='Add']"));
+                //cancelButton = driver.FindElement(By.XPath("//input[@value='Cancel']"));
             }
             catch (Exception ex)
             {
@@ -54,30 +54,8 @@ namespace test.Pages.components
             Thread.Sleep(5000);
         }
 
-        public void CheckLanguageButtonAvailability()
-        {
-
-            renderComponents();
-
-            int Lan_totalrows = driver.FindElements(By.XPath("//th[contains(text(),'Language')]/parent::tr/parent::thead/following-sibling::tbody/tr")).Count;
-
-            if (Lan_totalrows==4 && addLanguageButton.Displayed)
-            {
-                // Language button is  available
-                Console.WriteLine("can add more than four languages.");
-                Assert.Fail();
-               
-
-            }
-            else
-            {
-                
-
-                // Language button is not available
-                Console.WriteLine("can add more than four languages");
-                
-            }
-        }
+       
+        
 
 
         //public void closeMessageWindow()

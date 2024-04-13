@@ -51,6 +51,7 @@ namespace test.Utils
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
           
             driver.Navigate().GoToUrl("http://localhost:5000");
+            driver.Manage().Window.Maximize();
 
             Thread.Sleep(1000);
              LoginSteps loginSteps = new LoginSteps();
